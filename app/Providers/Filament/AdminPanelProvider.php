@@ -32,7 +32,7 @@ class AdminPanelProvider extends PanelProvider
             ->brandLogoHeight('3rem')
             ->brandName('E-Commerce')
             // ->darkMode(false)
-            ->favicon('https://static.vecteezy.com/system/resources/previews/039/302/568/non_2x/icon-puma-related-to-kenya-symbol-blue-eyes-style-simple-design-editable-simple-illustration-free-vector.jpg')
+            ->favicon(asset('logo.png'))
             ->login()
             ->colors([
                 'primary' => '#674cc4',

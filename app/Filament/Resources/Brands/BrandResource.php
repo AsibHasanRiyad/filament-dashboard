@@ -15,14 +15,17 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class BrandResource extends Resource
 {
     protected static ?string $model = Brand::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
-
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Identification;
+    protected static string|UnitEnum|null $navigationGroup = 'Shop';
+    // protected static ?string $navigationLabel = "Test Brand";
     protected static ?string $recordTitleAttribute = 'Brand';
+    protected static ?int $navigationSort = 1;
 
     public static function form(Schema $schema): Schema
     {
