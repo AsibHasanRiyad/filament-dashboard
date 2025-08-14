@@ -29,6 +29,11 @@ class ProductForm
                                 Select::make('brand_id')
                                     ->relationship('brand', 'name')
                                     ->required(),
+                                Select::make('categories')
+                                    ->relationship('categories', 'name')
+                                    ->multiple()
+                                    ->preload() // for multi select , loading data without searching
+                                    ->required(),
                                 TextInput::make('name')
                                     ->required()
                                     ->live(onBlur: true)

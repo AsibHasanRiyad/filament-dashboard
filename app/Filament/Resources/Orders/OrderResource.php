@@ -28,6 +28,14 @@ class OrderResource extends Resource
     // protected static ?string $recordTitleAttribute = 'Order';
     protected static string|UnitEnum|null $navigationGroup = "Shop";
     protected static ?int $navigationSort = 3;
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::where('status', '=', 'procession')->count();
+    }
+    public static function getNavigationBadgeColor(): string|array|null
+    {
+        return static::getModel()::where('status', '=', 'pending')->count() > 4 ? 'warning' : 'success';
+    }
 
     public static function form(Schema $schema): Schema
     {

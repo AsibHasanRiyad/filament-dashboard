@@ -28,6 +28,10 @@ class ProductResource extends Resource
     protected static ?int $navigationSort = 0;
     protected static ?string $recordTitleAttribute = 'name'; // for global search by name
     protected static int $globalSearchResultsLimit = 10; // search limit
+    public static function getNavigationBadge(): ?string
+    {
+        return static::getModel()::count();
+    }
     public static function getGloballySearchableAttributes(): array
     {
         return ['name', 'slug', 'description'];

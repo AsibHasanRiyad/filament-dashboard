@@ -25,6 +25,11 @@ class ProductsTable
                 TextColumn::make('brand.name')
                     ->numeric()
                     ->sortable(),
+                TextColumn::make('categories.name')
+                    ->label('Categories')
+                    ->badge()
+                    ->color('primary'),
+
                 TextColumn::make('name')
                     ->searchable(),
                 // TextColumn::make('slug')
