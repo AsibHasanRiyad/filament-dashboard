@@ -17,7 +17,7 @@ class Brand extends Model
         'is_visible',
         'description'
     ];
-    public function brands(): HasMany
+    public function products(): HasMany
     {
         return $this->hasMany(Product::class);
     }

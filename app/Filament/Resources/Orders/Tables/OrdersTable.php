@@ -26,12 +26,7 @@ class OrdersTable
                     ->sortable(),
                 TextColumn::make('number')
                     ->searchable(),
-                TextColumn::make('total_price')
-                    ->numeric()
-                    ->sortable()
-                    ->summarize([
-                        Sum::make()->money()
-                    ]),
+
                 TextColumn::make('status')
                     ->searchable(),
                 TextColumn::make('shipping_price')
