@@ -24,7 +24,7 @@ class BrandResource extends Resource
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Identification;
     protected static string|UnitEnum|null $navigationGroup = 'Shop';
     // protected static ?string $navigationLabel = "Test Brand";
-    protected static ?string $recordTitleAttribute = 'Brand';
+    protected static ?string $recordTitleAttribute = 'name';
     protected static ?int $navigationSort = 1;
 
     public static function form(Schema $schema): Schema

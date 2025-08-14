@@ -23,7 +23,7 @@ class CategoryResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Tag;
 
-    protected static ?string $recordTitleAttribute = 'Category';
+    // protected static ?string $recordTitleAttribute = 'Category';
     protected static string|UnitEnum|null $navigationGroup = "Shop";
     protected static ?int $navigationSort = 4;
 

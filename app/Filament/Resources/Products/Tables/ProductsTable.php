@@ -33,6 +33,8 @@ class ProductsTable
                     ->label('SKU')
                     ->searchable(),
 
+                TextColumn::make('description')->words(5),
+
                 TextColumn::make('quantity')
                     ->numeric()
                     ->sortable(),

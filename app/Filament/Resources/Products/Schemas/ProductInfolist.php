@@ -16,6 +16,7 @@ class ProductInfolist
                 TextEntry::make('brand.name')
                     ->numeric(),
                 TextEntry::make('name'),
+                TextEntry::make('description')->columnSpanFull(),
                 TextEntry::make('slug'),
                 TextEntry::make('sku')
                     ->label('SKU'),
@@ -35,6 +36,6 @@ class ProductInfolist
                     ->dateTime(),
                 TextEntry::make('updated_at')
                     ->dateTime(),
-            ]);
+            ])->columns(2);
     }
 }
